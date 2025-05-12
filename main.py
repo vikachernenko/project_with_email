@@ -1,15 +1,23 @@
 # docker run --rm -it -p 3000:80 -p 2525:25 rnwood/smtp4dev
 from email.message import EmailMessage  # пакет email модуль message
 import smtplib  # модуль
+from string import Template
+from pathlib import Path
 # с помощью smtplib мы будет отправлять имэйл сконструированный классом EmailMessage
+
+# загhужаем b читаем из папки шаблон html
+html_template = Template(Path("templates/index.html").read_text())
+# метод substitute позволяет заменить значения с $
+html_content = html_template.substitute({'name': 'Vika', 'date': 'tommorow'})
+
 
 my_email = EmailMessage()  # новый экземпляр класса
 # с помощью EmailMessage мы будем конструировать имэйл
 
 my_email['from'] = 'Vika'
 my_email['to'] = 'test@gmail.com'
-my_email['subject'] = 'Hello from Python'
-my_email.set_content('Hey! How are you doing?')
+my_email['subject'] = 'let\'s go out'
+my_email.set_content(html_content, 'html')
 
 # порт указываем тот на котором у нас открыт докер
 with smtplib.SMTP(host='localhost', port=2525) as smtp_server:
