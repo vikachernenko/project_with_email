@@ -9,7 +9,7 @@
 
 3. ```bash
    git clone https://github.com/vikachernenko/project_with_email
-   cd ваш-репозиторий
+   cd project_with_email
    ```
 
 4. переключитесь на ветку templates
