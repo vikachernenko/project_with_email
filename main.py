@@ -1,4 +1,3 @@
-# docker run --rm -it -p 3000:80 -p 2525:25 rnwood/smtp4dev
 from email.message import EmailMessage  # пакет email модуль message
 import smtplib  # модуль
 from string import Template
