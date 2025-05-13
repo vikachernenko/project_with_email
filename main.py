@@ -16,13 +16,15 @@ my_email = EmailMessage()  # новый экземпляр класса
 
 my_email['from'] = 'Vika <vi@gmail.com>'
 my_email['to'] = 'egor@gmail.com'
-my_email['subject'] = 'email with emage'
-my_email.set_content(html_content, 'html')
+my_email['subject'] = 'booking'
+my_email.set_content(html_content, subtype='html')
 
-with open('images/photo.jpg', 'rb') as img:
-    image_data = img.read()
-    my_email.add_attachment(image_data, maintype='image',
-                            subtype='jpg', filename='photo.jpg')
+# my_email.set_content(html_content, 'html')
+
+# with open('images/photo.jpg', 'rb') as img:
+#     image_data = img.read()
+#     my_email.add_attachment(image_data, maintype='image',
+#                             subtype='jpg', filename='photo.jpg')
 
 # порт указываем тот на котором у нас открыт докер
 with smtplib.SMTP(host='localhost', port=2525) as smtp_server:

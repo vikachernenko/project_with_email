@@ -1,13 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Photo Session Booking</title>
+  <!-- Встроенные стили (обязательно для писем) -->
+  <style type="text/css">
+    body { margin: 0; padding: 0; font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #F4F6F7; }
+    .es-wrapper { width: 100%; height: 100%; background-color: #F4F6F7; }
+    .es-content-body { background-color: #FFFFFF; width: 600px; }
+    .es-button { background: #BAE8E8; color: #272643; padding: 10px 20px; text-decoration: none; border-radius: 3px; font-weight: bold; }
+    @media only screen and (max-width: 600px) {
+      .es-content-body { width: 100% !important; }
+    }
+  </style>
 </head>
-<body>
-    <h1>Greeting email</h1>
-    <h2>Hello $name, how are you?</h2>
-    <h2>Let's go out $date</h2>
+<body style="margin: 0; padding: 0; font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #F4F6F7;">
+  <div class="es-wrapper-color" style="background-color: #F4F6F7;">
+    <!-- Основной контейнер -->
+    <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0" style="background-color: #F4F6F7;">
+      <tr>
+        <td align="center">
+          <!-- Контент письма -->
+          <table class="es-content-body" align="center" cellspacing="0" cellpadding="0" style="background-color: #FFFFFF; width: 600px;">
+            <tr>
+              <td align="left" style="padding: 20px;">
+                <!-- Логотип -->
+                <table width="100%">
+                  <tr>
+                    <td align="center">
+                      <img src="https://via.placeholder.com/160x80" alt="Company Logo" width="160" style="display: block; border: 0; outline: none;">
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Заголовок -->
+                <h2 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 22px; color: #333333;">BOOK AN APPOINTMENT</h2>
+                
+                <!-- Текст -->
+                <p style="text-align: center; color: #333333; font-size: 16px;">Hello $name, let's schedule a photo session for $date!</p>
+                <p style="text-align: center; color: #333333; font-size: 16px;">Our professional photographers are ready to capture your best moments.</p>
+                
+                <!-- Кнопка -->
+                <table width="100%">
+                  <tr>
+                    <td align="center" style="padding: 15px 0;">
+                      <a href="https://example.com/book" class="es-button" target="_blank" style="background: #BAE8E8; color: #272643; padding: 10px 20px; text-decoration: none; border-radius: 3px; font-weight: bold;">Book Now</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Футер -->
+          <table class="es-footer" align="center" cellspacing="0" cellpadding="0" style="background-color: #FAFAFA; width: 600px;">
+            <tr>
+              <td align="center" style="padding: 20px;">
+                <p style="color: #333333; font-size: 13px;">© 2023 Photo Studio. All rights reserved.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
